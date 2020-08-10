@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react';
-import styles from './Page.module.scss';
 
 type Props = {
   title?: string,
@@ -14,10 +13,10 @@ const Page = ({ title, children }: Props) => {
   });
 
   return (
-    <div ref={pageRef} className={styles['page']}>
-      <div className={styles['page__inner']}>
-        { title && <h1 className={styles['page__title']}>{title}</h1>}
-        <div className={styles['page__body']}>
+    <div ref={pageRef} className="m-3 max-w-screen-md mx-auto">
+      <div className="container mx-auto p-6 max-w-screen-md">
+        { title && <h1 className="text-2xl">{title}</h1>}
+        <div>
           {children}
         </div>
       </div>

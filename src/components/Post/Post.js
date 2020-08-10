@@ -20,7 +20,6 @@ const Post = ({ post }: Props) => {
 
   return (
     <div className={styles['post']}>
-      <Link className={styles['post__home-button']} to="/">All Articles</Link>
 
       <div className={styles['post__content']}>
         <Content body={html} title={title} />
@@ -35,6 +34,7 @@ const Post = ({ post }: Props) => {
       <div className={styles['post__comments']}>
         <Comments postSlug={slug} postTitle={post.frontmatter.title} />
       </div>
+      <Link className="border border-white text-lg rounded-lg p-3 m-4" to="/">All Articles</Link>
     </div>
   );
 };

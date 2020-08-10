@@ -1,11 +1,11 @@
 'use strict';
 
-const lost = require('lost');
 const pxtorem = require('postcss-pxtorem');
 const autoprefixer = require('autoprefixer');
+const tailwindcss = require("tailwindcss");
 
 module.exports = [
-  lost(),
+  tailwindcss(),
   pxtorem({
     rootValue: 16,
     unitPrecision: 5,

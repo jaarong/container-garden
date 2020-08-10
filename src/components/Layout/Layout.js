@@ -10,14 +10,16 @@ type Props = {
   children: ReactNode,
   title: string,
   description?: string,
-  socialImage? :string
+  socialImage? :string,
+  cssLayout? :string
 };
 
 const Layout = ({
   children,
   title,
   description,
-  socialImage
+  socialImage, 
+  cssLayout
 }: Props) => {
   const { author, url } = useSiteMetadata();
   const metaImage = socialImage != null ? socialImage : author.photo;
@@ -36,7 +38,11 @@ const Layout = ({
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={metaImageUrl} />
       </Helmet>
-      {children}
+      <div className="bg-charcoal text-gray-100">
+        <div className={cssLayout}>
+          {children}
+        </div>
+      </div>
     </div>
   );
 };
