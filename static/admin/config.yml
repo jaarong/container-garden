@@ -1,7 +1,17 @@
 backend:
   name: git-gateway
   branch: master
-
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: hskvixv4h
+    api_key: 477727479819292
+    output_filename_only: false
+    default_transformations:
+      - - fetch_format: auto
+          width: 1000
+          quality: auto
+          crop: scale
 media_folder: "static/media"
 public_folder: "/media"
 

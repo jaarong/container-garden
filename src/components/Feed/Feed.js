@@ -2,6 +2,7 @@
 import React from 'react';
 import moment from 'moment';
 import { Link } from 'gatsby';
+import Img from "gatsby-image";
 import type { Edges } from '../../types';
 
 type Props = {
@@ -12,6 +13,7 @@ const Feed = ({ edges }: Props) => (
   <div className="mx-3">
     {edges.map((edge) => (
       <div className="mb-8" key={edge.node.fields.slug}>
+        <img src={edge.node.frontmatter.featuredImage} />
         <div className="divide-x-2 divide-green-500 text-sm font-semibold text-secondary">
           <time className="text-sm font-semibold uppercase pr-4" dateTime={moment(edge.node.frontmatter.date).format('MMMM D, YYYY')}>
             {moment(edge.node.frontmatter.date).format('MMMM YYYY')}
