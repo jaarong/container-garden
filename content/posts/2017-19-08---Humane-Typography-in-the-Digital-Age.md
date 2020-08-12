@@ -1,5 +1,5 @@
 ---
-featuredImage: /media/type-through-time.jpg
+featuredImage: https://res.cloudinary.com/hskvixv4h/image/upload/c_scale,f_auto,q_auto,w_1000/v1597246337/flowers_cbpah5.jpg
 slug: humane-typography-in-the-digital-age
 draft: false
 socialImage: /media/42-line-bible.jpg
