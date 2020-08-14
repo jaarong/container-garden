@@ -10,6 +10,7 @@ const Header = () => {
 
   return (
   <header className="bg-dark-green border-b">
+    <a id="topofpage"></a>
     <div className="container mx-auto">
       <nav className="flex flex-col md:flex-row md:items-center justify-center md:justify-between md:flex-wrap md:p-1">
         <div className="flex justify-center md:flex-shrink-0 p-2">
@@ -20,9 +21,9 @@ const Header = () => {
             </div>
         </div>
         <div className="flex-grow text-center md:text-right bg-leaf-green text-black md:bg-dark-green md:text-white">
-          <Link className="inline-block p-2 hover:text-green-500" activeClassName="inline-block p-2 text-green-500" to="/">Home</Link>
-          <Link className="inline-block p-2 hover:text-green-500" activeClassName="inline-block p-2 text-green-500" to="/about">About</Link>
-          <Link className="inline-block p-2 hover:text-green-500" activeClassName="inline-block p-2 text-green-500" to="/contact">Contact</Link>
+          <Link className="inline-block p-2 hover:text-primary" activeClassName="inline-block p-2 text-primary" to="/">Home</Link>
+          <Link className="inline-block p-2 hover:text-primary" activeClassName="inline-block p-2 text-primary" to="/pages/about">About</Link>
+          <Link className="inline-block p-2 hover:text-primary" activeClassName="inline-block p-2 text-green-500" to="/pages/contacts">Contact</Link>
         </div>
       </nav>
     </div>

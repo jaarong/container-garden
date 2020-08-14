@@ -1,7 +1,7 @@
 'use strict';
 
 const siteConfig = require('./config.js');
-const postCssPlugins = require('./postcss-config.js');
+const postCssPlugins = require('./postcss.config.js');
 
 module.exports = {
   pathPrefix: siteConfig.pathPrefix,
@@ -227,16 +227,16 @@ module.exports = {
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-postcss',
-    {
-      resolve: 'gatsby-plugin-sass',
-      options: {
-        postCssPlugins: [...postCssPlugins],
-        cssLoaderOptions: {
-          camelCase: false,
-        }
-      }
-    },
     'gatsby-plugin-flow',
     'gatsby-plugin-optimize-svgs',
+    `gatsby-plugin-smoothscroll`,
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Lato']
+        }
+      }
+    }
   ]
 };

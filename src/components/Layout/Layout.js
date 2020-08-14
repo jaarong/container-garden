@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 import { withPrefix } from 'gatsby';
 import type { Node as ReactNode } from 'react';
 import { useSiteMetadata } from '../../hooks';
-import styles from './Layout.module.scss';
 
 type Props = {
   children: ReactNode,
@@ -26,7 +25,7 @@ const Layout = ({
   const metaImageUrl = url + withPrefix(metaImage);
 
   return (
-    <div className={styles.layout}>
+    <div>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>

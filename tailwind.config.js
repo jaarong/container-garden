@@ -23,6 +23,10 @@ module.exports = {
         'info': '#FCCA46'
       }
     },
+    fontFamily: {
+      'sans': ['Lato', 'san-serif'],
+      'body': ['Lato', 'san-serif'],
+    }
   },
   variants: {
     display: ["group-hover"],

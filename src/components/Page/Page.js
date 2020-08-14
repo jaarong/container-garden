@@ -15,8 +15,8 @@ const Page = ({ title, children }: Props) => {
   return (
     <div ref={pageRef} className="m-3 max-w-screen-md mx-auto">
       <div className="container mx-auto p-6 max-w-screen-md">
-        { title && <h1 className="text-2xl">{title}</h1>}
-        <div>
+        { title && <h1 className="text-3xl">{title}</h1>}
+        <div className="mt-4">
           {children}
         </div>
       </div>
