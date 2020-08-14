@@ -12,19 +12,24 @@ tags:
   - testing
 ---
 # Heading 1
+
 ## Heading 2
+
 ### Heading 3
+
 #### Heading 4
+
 ##### Heading 5
+
 ###### Heading 6
 
 **Bold**
 
 *Italics*
 
-__Underline__
+**Underline**
 
-![Kale leaves](/uploads/kale_leaves_928a55bb2a.jpeg)
+![Flowers alt text](https://res.cloudinary.com/hskvixv4h/image/upload/c_scale,f_auto,q_auto,w_1000/v1596573456/sample.jpg "Flowers in the summer")
 
 [https://www.youtube.com/](Link)
 
@@ -34,24 +39,41 @@ This is the primary heading and there should only be one of these per page
 
 A small paragraph to emphasis and show important bits.
 
--     This is a list item
--     So is this - there could be more
--     Make sure to style list items to:
-- -         Not forgetting child list items
-- -         Not forgetting child list items
-- -         Not forgetting child list items
-- -         Not forgetting child list items
--     A couple more
--     top level list items
+* ```
+  This is a list item
+  ```
+* ```
+  So is this - there could be more
+  ```
+* ```
+  Make sure to style list items to:
+  ```
+* * ```
+        Not forgetting child list items
+    ```
+* * ```
+        Not forgetting child list items
+    ```
+* * ```
+        Not forgetting child list items
+    ```
+* * ```
+        Not forgetting child list items
+    ```
+* ```
+  A couple more
+  ```
+* ```
+  top level list items
+  ```
 
 Don't forget Ordered lists:
-1.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-2.  Aliquam tincidunt mauris eu risus.
+
+1. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+2. Aliquam tincidunt mauris eu risus.
 3. child item
 4. child item
-3.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-4.  Aliquam tincidunt mauris eu risus.
-5.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-6.  Aliquam tincidunt mauris eu risus.
-
-
+5. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+6. Aliquam tincidunt mauris eu risus.
+7. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+8. Aliquam tincidunt mauris eu risus.
