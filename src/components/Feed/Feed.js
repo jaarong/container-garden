@@ -23,7 +23,7 @@ const Feed = ({ edges }: Props) => (
           </span>
         </div>
         <h2 className="text-3xl my-2">
-          <Link className="" to={edge.node.fields.slug}>{edge.node.frontmatter.title}</Link>
+          <Link className="text-white" to={edge.node.fields.slug}>{edge.node.frontmatter.title}</Link>
         </h2>
         <p className="">{edge.node.frontmatter.description}</p>
         <div className="my-2"><Link className="text-primary" to={edge.node.fields.slug}>Read</Link></div>

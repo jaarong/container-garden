@@ -22,7 +22,7 @@ const PageTemplate = ({ data }: Props) => {
   return (
     <Layout title={`${pageTitle} - ${siteTitle}`} description={metaDescription} socialImage={socialImage} >
       <Page title={pageTitle}>
-        <div dangerouslySetInnerHTML={{ __html: pageBody }} />
+        <div className="markdown" dangerouslySetInnerHTML={{ __html: pageBody }} />
       </Page>
     </Layout>
   );
