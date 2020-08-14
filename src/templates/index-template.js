@@ -30,7 +30,6 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
-      <Header />
       <Page>
         <Feed edges={edges} />
         <Pagination

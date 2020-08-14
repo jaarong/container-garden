@@ -20,11 +20,11 @@ const Pagination = ({
 
   return (
     <div className="">
-      <div className="">
-        <Link rel="prev" to={hasPrevPage ? prevPagePath : '/'} >{PAGINATION.PREV_PAGE}</Link>
+      <div className="inline-block w-2/4 text-left">
+        <Link className="text-xl text-secondary" rel="prev" to={hasPrevPage ? prevPagePath : '/'} >{PAGINATION.PREV_PAGE}</Link>
       </div>
-      <div className="">
-        <Link rel="next" to={hasNextPage ? nextPagePath : '/'} >{PAGINATION.NEXT_PAGE}</Link>
+      <div className="inline-block w-2/4 text-right">
+        <Link className="text-info text-xl" rel="next" to={hasNextPage ? nextPagePath : '/'} >{PAGINATION.NEXT_PAGE}</Link>
       </div>
     </div>
   );
