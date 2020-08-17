@@ -29,7 +29,7 @@ tags:
 
 **Underline**
 
-![Flowers alt text](https://res.cloudinary.com/hskvixv4h/image/upload/c_scale,f_auto,q_auto,w_1000/v1596573456/sample.jpg "Flowers in the summer")
+![Flowers alt text](https://res.cloudinary.com/hskvixv4h/image/upload/c_scale,f_auto,q_auto,w_2000/v1596573456/sample.jpg "Flowers in the summer")
 
 [https://www.youtube.com/](Link)
 
