@@ -11,6 +11,11 @@ tags:
   - development
   - testing
 ---
+import { Contact } from './src/components/contact';
+
+<Contact />
+# My MDX
+
 # Heading 1
 
 ## Heading 2
