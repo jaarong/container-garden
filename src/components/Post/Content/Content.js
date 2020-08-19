@@ -3,13 +3,15 @@ import React from 'react';
 
 type Props = {
   body: string,
-  title: string
+  title: string,
+  banner: string
 };
 
-const Content = ({ body, title }: Props) => (
+const Content = ({ body, title, banner }: Props) => (
   <div className="">
-    <h1 className="text-3xl">{title}</h1>
-    <div className="markdown" dangerouslySetInnerHTML={{ __html: body }} />
+    <img class="my-6" src={banner} />
+    <h1 className="text-5xl">{title}</h1>
+      <div className="markdown" dangerouslySetInnerHTML={{ __html: body }} />
   </div>
 );
 

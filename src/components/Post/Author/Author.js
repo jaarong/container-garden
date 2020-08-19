@@ -9,8 +9,8 @@ const Author = () => {
   return (
     <div className="border-4 border-pine p-5">
       <h3 className="text-xl">About The Author</h3>
-      <div className="p-4 flex">
-        <div className="p-4 mx-4 border border-white"><img src="{author.photo}" /></div>
+      <div className="flex my-6">
+        <div className="mr-4 border border-white"><img src={author.photo} /></div>
         <div className="">
           <h4 className="text-lg">{author.name}</h4>
           <p>{author.bio}</p>

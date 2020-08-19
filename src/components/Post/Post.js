@@ -18,18 +18,18 @@ type Props = {
 const Post = ({ post }: Props) => {
   const { html } = post;
   const { tagSlugs, slug } = post.fields;
-  const { tags, title, date } = post.frontmatter;
+  const { tags, title, date, featuredImage } = post.frontmatter;
 
   return (
-    <div className="">
+    <div className="post-start">
 
       <div className="">
-        <Content body={html} title={title} />
+        <Content body={html} title={title} banner={featuredImage} />
       </div>
 
       <div className="">
         <Meta date={date} />
-        {tags && tagSlugs && <Tags className="border border-white text-lg rounded-lg p-3 m-4" tags={tags} tagSlugs={tagSlugs} />}
+        {tags && tagSlugs && <Tags className="border border-white text-lg rounded-lg p-3 my-4" tags={tags} tagSlugs={tagSlugs} />}
         <Author />
       </div>
 

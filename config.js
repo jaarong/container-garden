@@ -26,7 +26,7 @@ module.exports = {
   ],
   author: {
     name: 'Aaron Green',
-    photo: '/photo.jpg',
+    photo: '/profile_photo.jpg',
     bio: 'A beginner gardener with a motivation to eat more fresh vegetables.'
   }, 
   contacts: {
