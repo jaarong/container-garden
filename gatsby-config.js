@@ -237,6 +237,12 @@ module.exports = {
           families: ['Lato']
         }
       }
-    }
+    }, 
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        extensions: ['.mdx', '.md'],
+      }
+    },
   ]
 };
