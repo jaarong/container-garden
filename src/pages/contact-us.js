@@ -68,7 +68,7 @@ const ContactPage = ({ data }: Props) => {
                         </div>
                         <div className="form-group block p-5">
                             <label className="block pb-2" htmlFor="messageInput">Message</label>
-                            <input type="text" name="name" className="form-control text-black" id="messageInput" required="required" value={messageInput} onChange={event => setMessage(event.target.value)} />
+                            <textarea type="text" rows="5" cols="40" name="message" className="form-control text-black" id="messageInput" required="required" value={messageInput} onChange={event => setMessage(event.target.value)} />
                         </div>
                         <button className="border border-white text-lg rounded-lg p-3 m-4 hover:bg-sunglow hover:text-dark" type="submit" disabled={serverState.submitting}>Send</button>
                         {serverState.status && (
