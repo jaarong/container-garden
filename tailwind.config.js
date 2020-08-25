@@ -7,6 +7,7 @@ module.exports = {
       '1/2': '50vh',
       '3/4': '75vh',
       'full': '100%',
+      'screen': '100vh'
     },
     extend: {
       colors: {
@@ -20,7 +21,8 @@ module.exports = {
         'primary': '#A1C181',
         'secondary': '#619B8A',
         'danger': '#FE7F2D',
-        'info': '#FCCA46'
+        'info': '#FCCA46',
+        'dark': '#233D4D'
       }
     },
     fontFamily: {

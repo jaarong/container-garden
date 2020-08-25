@@ -26,6 +26,7 @@ const Layout = ({
   const metaImage = socialImage != null ? socialImage : author.photo;
   const metaImageUrl = url + withPrefix(metaImage);
 
+
   return (
     <div>
       <Helmet>
@@ -39,9 +40,9 @@ const Layout = ({
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={metaImageUrl} />
       </Helmet>
-      <div className="bg-charcoal text-gray-100">
+      <div className="bg-charcoal text-gray-100 min-h-screen relative">
         <Header />
-        <div className={cssLayout}>
+        <div className="pb-16">
           {children}
         </div>
         <Footer />
