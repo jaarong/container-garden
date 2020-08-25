@@ -11,11 +11,6 @@ tags:
   - development
   - testing
 ---
-import { Contact } from './src/components/Contact';
-
-<Contact />
-# My MDX
-
 # Heading 1
 
 ## Heading 2
@@ -86,3 +81,32 @@ Don't forget Ordered lists:
 6. Aliquam tincidunt mauris eu risus.
 7. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 8. Aliquam tincidunt mauris eu risus.
+
+Table
+
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text | 
+
+Definition List
+
+term
+: definition 
+: definition 2
+
+Horizontal Rule
+
+---
+
+Task List
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media 
+
+Strikethrough
+
+~~The world is flat.~~
+
+
