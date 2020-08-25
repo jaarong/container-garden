@@ -85,7 +85,7 @@ const ContactPage = ({ data }: Props) => {
 
 export const query = graphql`
   query ContactQuery {
-    markdownRemark(id: { eq: "37e87693-fa8f-5903-a176-303079ca91a4" }) {
+    markdownRemark(frontmatter: {title: {eq: "Contact me"}}) {
       id
       html
       frontmatter {
