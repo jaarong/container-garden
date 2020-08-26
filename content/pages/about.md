@@ -5,7 +5,7 @@ socialImage: /media/image-2.jpg
 slug: about
 draft: false
 ---
-<img class="float-left pr-4 pb-4" src="https://res.cloudinary.com/hskvixv4h/image/upload/c_scale,f_auto,q_auto,w_150/v1598469446/profile_photo_dwnrer.jpg" />
+<img class="float-left pr-4 pb-4 pt-4" src="https://res.cloudinary.com/hskvixv4h/image/upload/c_scale,f_auto,q_auto,w_150/v1598469446/profile_photo_dwnrer.jpg" />
 
 After some health issues, I started reading and learning more about nutrition.  Trying to get my diet in check, and stop eating junk. My blood pressure and cholesterol was simply too high. I started tracking what I ate and my sodium was through the roof. Some of what I was eating had trans fat, and most of it was processed.    
 
