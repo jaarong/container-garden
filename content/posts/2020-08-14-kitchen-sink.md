@@ -39,7 +39,9 @@ tags:
 
 
 <Slide left>
+
 > This is a blockquote. You only live once!
+
 </Slide>
 
 This is the primary heading and there should only be one of these per page
