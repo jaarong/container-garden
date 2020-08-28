@@ -11,6 +11,8 @@ tags:
   - development
   - testing
 ---
+import Slide from 'react-reveal/Slide';
+
 # Heading 1
 
 ## Heading 2
