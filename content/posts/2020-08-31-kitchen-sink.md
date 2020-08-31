@@ -2,7 +2,7 @@
 template: post
 title: Kitchen Sink
 featuredImage: https://res.cloudinary.com/hskvixv4h/image/upload/c_scale,f_auto,q_auto,w_1000/v1597246337/flowers_cbpah5.jpg
-slug: kitchen-sink
+slug: 2020-08-31-kitchen-sink
 draft: false
 date: 2020-08-31T16:10:57.813Z
 description: This is a document that has many markdown elements for display
