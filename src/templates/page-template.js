@@ -31,9 +31,10 @@ const PageTemplate = ({ data }: Props) => {
 
 export const query = graphql`
   query PageBySlug($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
+    mdx( slug: { eq: $slug } ) {
       id
       body
+      slug
       frontmatter {
         title
         date

@@ -13,7 +13,6 @@ type Props = {
 };
 
 const PostTemplate = ({ data }: Props) => {
-  console.log(query);
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
   const { frontmatter } = data.mdx;
   const { title: postTitle, description: postDescription, socialImage } = frontmatter;
@@ -32,9 +31,10 @@ const PostTemplate = ({ data }: Props) => {
 
 export const query = graphql`
   query PostBySlug($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
+    mdx(slug: { eq: $slug } ) {
       id
       body
+      slug
       fields {
         slug
         tagSlugs
