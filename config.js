@@ -30,9 +30,15 @@ module.exports = {
     bio: 'A beginner gardener with a motivation to eat more fresh vegetables.'
   }, 
   contacts: {
-    twitter: {
-      link:'@ContainerGreens',
-      icon: 'faTwitterSquare'
+    social: {
+      twitter: {
+        link:'@ContainerGreens',
+        icon: 'faTwitterSquare'
+      },
+      instagram: {
+        link: '@containergreens', 
+        icon: 'faInstagramSquare'
+      }
     },
     rss: {
       link: '',
@@ -42,9 +48,5 @@ module.exports = {
       link: '',
       icon: 'faEnvelopeSquare'
     },
-    instagram: {
-      link: '@containergreens', 
-      icon: 'faInstagramSquare'
-    }
   }
 };

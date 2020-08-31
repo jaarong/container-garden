@@ -1,20 +1,22 @@
 import React, { useState }  from "react"
 import axios from "axios";
 import Layout from '../components/Layout';
+import Social from '../components/Social';
 import { useSiteMetadata } from '../hooks';
 import { graphql } from 'gatsby';
-import type { MarkdownRemark } from '../types';
+import type { Mdx } from '../types';
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
 type Props = {
     data: {
-      markdownRemark: MarkdownRemark
+      mdx: mdx
     }
 };
 
 const ContactPage = ({ data }: Props) => {
     const { siteTitle, siteSubtitle } = useSiteMetadata();
-    const { html: pageBody } = data.markdownRemark;
-    const { frontmatter } = data.markdownRemark;
+    const { body } = data.mdx;
+    const { frontmatter } = data.mdx;
     const { title: pageTitle, description: pageDescription, socialImage } = frontmatter;
 
     const [emailInput, setEmail] = useState("");
@@ -56,7 +58,8 @@ const ContactPage = ({ data }: Props) => {
             <div className="m-3 max-w-screen-md mx-auto">
                 <div className="container mx-auto p-6 max-w-screen-md">
                     <h1 className="text-5xl">{pageTitle}</h1>
-                    <div className="markdown" dangerouslySetInnerHTML={{ __html: pageBody }} />
+                    <MDXRenderer>{body}</MDXRenderer>
+                    <Social />
                     <form method="post" onSubmit={handleOnSubmit} name="contact">
                         <div className="form-group block p-5">
                             <label className="block pb-2" htmlFor="emailInput" required="required">Email address</label>
@@ -85,9 +88,9 @@ const ContactPage = ({ data }: Props) => {
 
 export const query = graphql`
   query ContactQuery {
-    markdownRemark(frontmatter: {title: {eq: "Contact me"}}) {
+    mdx(frontmatter: {title: {eq: "Contact me"}}) {
       id
-      html
+      body
       frontmatter {
         title
         date

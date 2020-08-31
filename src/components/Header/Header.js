@@ -4,6 +4,8 @@ import { useSiteMetadata } from '../../hooks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSeedling } from '@fortawesome/free-solid-svg-icons'
 import Zoom from 'react-reveal/Zoom'; // Importing Zoom effect
+import TransitionLink from "gatsby-plugin-transition-link"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Header = () => {
   const { title, subtitle } = useSiteMetadata();
@@ -23,9 +25,9 @@ const Header = () => {
           </Zoom>
         </div>
         <div className="flex-grow text-center md:text-right bg-leaf-green text-lg md:bg-dark-green md:text-white">
-          <Link className="inline-block p-2 hover:text-dark" activeClassName="inline-block p-2 text-dark" to="/">Home</Link>
-          <Link className="inline-block p-2 hover:text-dark" activeClassName="inline-block p-2 text-dark" to="/pages/about/">About</Link>
-          <Link className="inline-block p-2 hover:text-dark" activeClassName="inline-block p-2 text-dark" to="/contact-us/">Contact</Link>
+         <AniLink paintDrip hex="#A1C181" className="inline-block p-2 hover:text-dark" activeClassName="inline-block p-2 text-dark" to="/">Home</AniLink>
+         <AniLink paintDrip hex="#A1C181" className="inline-block p-2 hover:text-dark" activeClassName="inline-block p-2 text-dark" to="/pages/about/">About</AniLink>
+         <AniLink paintDrip hex="#A1C181" className="inline-block p-2 hover:text-dark" activeClassName="inline-block p-2 text-dark" to="/contact-us/">Contact</AniLink>
         </div>
       </nav>
     </div>

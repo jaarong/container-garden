@@ -4,17 +4,18 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Post from '../components/Post';
 import { useSiteMetadata } from '../hooks';
-import type { MarkdownRemark } from '../types';
+import type { Mdx } from '../types';
 
 type Props = {
   data: {
-    markdownRemark: MarkdownRemark
+    mdx: Mdx
   }
 };
 
 const PostTemplate = ({ data }: Props) => {
+  console.log(query);
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
-  const { frontmatter } = data.markdownRemark;
+  const { frontmatter } = data.mdx;
   const { title: postTitle, description: postDescription, socialImage } = frontmatter;
   const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
 
@@ -22,7 +23,7 @@ const PostTemplate = ({ data }: Props) => {
     <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription} socialImage={socialImage} >
       <div className="m-3 max-w-screen-md mx-auto">
         <div className="container mx-auto p-6 max-w-screen-md">
-          <Post post={data.markdownRemark} />
+          <Post post={data.mdx} />
         </div>
       </div>
     </Layout>
@@ -31,9 +32,9 @@ const PostTemplate = ({ data }: Props) => {
 
 export const query = graphql`
   query PostBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug } }) {
       id
-      html
+      body
       fields {
         slug
         tagSlugs
@@ -44,7 +45,6 @@ export const query = graphql`
         tags
         title
         socialImage
-        featuredImage
       }
     }
   }

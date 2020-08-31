@@ -16,7 +16,8 @@ type Props = {
 };
 
 const Post = ({ post }: Props) => {
-  const { html } = post;
+  console.log(post);
+  const { body } = post;
   const { tagSlugs, slug } = post.fields;
   const { tags, title, date, featuredImage } = post.frontmatter;
 
@@ -24,7 +25,7 @@ const Post = ({ post }: Props) => {
     <div className="post-start">
 
       <div className="">
-        <Content body={html} title={title} banner={featuredImage} />
+        <Content body={body} title={title} banner={featuredImage} />
       </div>
 
       <div className="">

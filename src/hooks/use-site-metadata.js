@@ -13,16 +13,18 @@ const useSiteMetadata = () => {
               photo
             }
             contacts {
-              twitter {
-                link
+              social {
+                twitter {
+                  link
+                }
+                instagram {
+                  link
+                }
               }
               rss {
                 link
               }
               contactForm {
-                link
-              }
-              instagram {
                 link
               }
             }
