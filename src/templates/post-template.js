@@ -17,14 +17,11 @@ const PostTemplate = ({ data }: Props) => {
   const { frontmatter } = data.mdx;
   const { title: postTitle, description: postDescription, featuredImage } = frontmatter;
   const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
+  const containerCss = "container mx-auto p-6 max-w-screen-md";
 
   return (
     <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription} socialImage={featuredImage} >
-      <div className="m-3 max-w-screen-md mx-auto">
-        <div className="container mx-auto p-6 max-w-screen-md">
-          <Post post={data.mdx} />
-        </div>
-      </div>
+      <Post containerCss={containerCss} post={data.mdx} />
     </Layout>
   );
 };

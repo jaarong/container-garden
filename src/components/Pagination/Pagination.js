@@ -21,7 +21,7 @@ const Pagination = ({
 }: Props) => {
 
   return (
-    <div className="">
+    <div className="container mx-auto p-6 max-w-screen-lg">
       <div className="inline-block w-2/4 text-left">
         <Link className="text-xl text-secondary" rel="prev" to={hasPrevPage ? prevPagePath : '/'} ><FontAwesomeIcon icon={faChevronLeft} /> PREV</Link>
       </div>

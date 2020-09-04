@@ -10,10 +10,10 @@ type Props = {
 };
 
 const Content = ({ body, title, banner }: Props) => (
-  <div className="">
-    <img class="my-6" src={banner} />
-    <h1 className="text-5xl pb-6">{title}</h1>
-    <div className="markdown"><MDXRenderer>{body}</MDXRenderer></div>
+  <div>
+    <div className="">
+      <div className="markdown"><MDXRenderer>{body}</MDXRenderer></div>
+    </div>
   </div>
 );
 

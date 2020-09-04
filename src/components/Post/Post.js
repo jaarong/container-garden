@@ -6,39 +6,44 @@ import Comments from './Comments';
 import Content from './Content';
 import Meta from './Meta';
 import Tags from './Tags';
+import Banner from './Banner';
 import type { Node } from '../../types';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
 type Props = {
-  post: Node
+  post: Node,
+  containerCss: string
 };
 
-const Post = ({ post }: Props) => {
-  console.log(post);
+const Post = ({ post, containerCss }: Props) => {
   const { body } = post;
   const { tagSlugs, slug } = post.fields;
   const { tags, title, date, featuredImage } = post.frontmatter;
 
   return (
     <div className="post-start">
-
       <div className="">
+        <Banner title={title} featuredImage={featuredImage} />
+      </div>
+      <div className={containerCss}>
         <Content body={body} title={title} banner={featuredImage} />
       </div>
 
-      <div className="">
+      <div className={containerCss}>
         <Meta date={date} />
         {tags && tagSlugs && <Tags className="border border-white text-lg rounded-lg p-3 my-4" tags={tags} tagSlugs={tagSlugs} />}
         <Author />
       </div>
 
-      <div className="text-sm">
+      <div className={containerCss}>
         <Comments postSlug={slug} postTitle={post.frontmatter.title} />
       </div>
-      <div className="text-center my-6">
-        <button title="Back to top" className="border border-white text-lg rounded-lg p-3 m-4" onClick={() => scrollTo('#topofpage')}><FontAwesomeIcon icon={ faChevronUp } /></button>
+      <div className={containerCss}>
+        <div className="text-center">
+          <button title="Back to top" className="border border-white text-lg rounded-lg p-3" onClick={() => scrollTo('#topofpage')}><FontAwesomeIcon icon={ faChevronUp } />&nbsp;&nbsp;To The Top </button>
+        </div>
       </div>
     </div>
   );
