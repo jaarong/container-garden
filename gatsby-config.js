@@ -127,7 +127,7 @@ module.exports = {
         }]
       }
     },
-    {
+/*     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
@@ -156,7 +156,7 @@ module.exports = {
           'gatsby-remark-external-links'
         ]
       }
-    },
+    }, */
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-netlify',
