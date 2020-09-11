@@ -254,10 +254,8 @@ module.exports = {
         theme_color: '#F7A046',
         display: 'standalone',
         icon: 'static/profile_photo.jpg',
-        cache_busting_mode: 'none'
       },
     },
-    'gatsby-plugin-offline',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-postcss',

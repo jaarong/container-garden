@@ -1,13 +1,13 @@
 'use strict';
 
 module.exports = {
-  url: 'https://container-garden.netlify.com',
+  url: 'https://container-garden.netlify.app',
   pathPrefix: '/',
   title: 'Container.Garden',
   subtitle: 'My adventures in container gardening',
   copyright: '© All rights reserved.',
   disqusShortname: '',
-  postsPerPage: 4,
+  postsPerPage: 5,
   googleAnalyticsId: 'UA-106770869-2',
   useKatex: false,
   menu: [
