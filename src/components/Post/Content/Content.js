@@ -11,7 +11,7 @@ type Props = {
 
 const Content = ({ body, title, banner }: Props) => (
   <div>
-    <div className="">
+    <div>
       <div className="markdown"><MDXRenderer>{body}</MDXRenderer></div>
     </div>
   </div>

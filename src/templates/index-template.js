@@ -3,8 +3,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Feed from '../components/Feed';
-import Page from '../components/Page';
-import Header from '../components/Header';
 import Pagination from '../components/Pagination';
 import { useSiteMetadata } from '../hooks';
 import type { PageContext, AllMdx } from '../types';
