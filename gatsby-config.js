@@ -256,7 +256,6 @@ module.exports = {
         icon: 'static/profile_photo.jpg'
       },
     },
-    'gatsby-plugin-offline',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-postcss',
