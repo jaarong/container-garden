@@ -13,7 +13,7 @@ const Feed = ({ edges }: Props) => (
   <div className="container mx-auto p-6 max-w-screen-lg">
     {edges.map((edge) => (
       <div class="mb-12 border-white border border-solid" key={edge.node.fields.slug}>
-        <div className="flex flex-col md:flex-row justify-center flex-wrap">
+        <div className="flex flex-col-reverse md:flex-row justify-center flex-wrap">
           <div className="w-full md:w-3/5 p-6">
             <p>
               <time className="text-sm text-gray-400 font-light uppercase py-4" dateTime={moment(edge.node.frontmatter.date).format('MMMM D, YYYY')}>

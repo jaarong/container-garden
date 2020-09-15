@@ -256,6 +256,15 @@ module.exports = {
         icon: 'static/profile_photo.jpg',
       },
     },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `#A1C181`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-postcss',
