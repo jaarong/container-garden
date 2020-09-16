@@ -16,11 +16,11 @@ type Props = {
 
 const Layout = ({
   children,
-  title,
+  pageTitle,
   description,
   socialImage, 
 }: Props) => {
-  const { author, url } = useSiteMetadata();
+  const { title: siteTitle, url: url } = useSiteMetadata();
   const metaImage = socialImage != null ? socialImage : author.photo;
   //Not needed since hosting media on cloudinary
   //const metaImageUrl = url + withPrefix(metaImage);
@@ -29,12 +29,12 @@ const Layout = ({
   return (
     <div>
       <GatsbySeo
-      title={title}
+      title={`${pageTitle} - ${siteTitle}`}
       description={description}
       canonical={url}
       openGraph={{
         url: {url},
-        title: {title},
+        title:`${pageTitle} - ${siteTitle}`,
         description: {description},
         images: [
           {
@@ -52,7 +52,7 @@ const Layout = ({
           { url: 'https://www.example.ie/og-image-03.jpg' },
           { url: 'https://www.example.ie/og-image-04.jpg' },
         ],
-        site_name: 'Container.Greens',
+        site_name: {siteTitle},
       }}
     />
       <div className="bg-charcoal text-gray-100 min-h-screen relative">

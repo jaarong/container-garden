@@ -29,7 +29,13 @@ collections:
     fields:
       - {label: "Template", name: "template", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Featured Image", name: "featuredImage", widget: "image"}
+      - name: featured_image
+        label: Featured image
+        widget: object
+        fields:
+          - {name: src, label: Image, widget: image}
+          - {name: alt, label: Alt text, widget: string}
+          - {name: title, label: Title, widget: string}
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - {label: "Publish Date", name: "date", widget: "datetime"}

@@ -13,14 +13,13 @@ type Props = {
 };
 
 const PostTemplate = ({ data }: Props) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
   const { frontmatter } = data.mdx;
-  const { title: postTitle, description: postDescription, featuredImage } = frontmatter;
+  const { title: title, description: postDescription, featuredImage } = frontmatter;
   const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
   const containerCss = "container mx-auto p-6 max-w-screen-md";
 
   return (
-    <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription} socialImage={featuredImage} >
+    <Layout pageTitle={title} description={metaDescription} socialImage={featuredImage} >
       <Post containerCss={containerCss} post={data.mdx} />
     </Layout>
   );
