@@ -9,19 +9,21 @@ import { useSiteMetadata } from '../../hooks';
 
 type Props = {
   children: ReactNode,
-  title: string,
-  description?: string,
-  socialImage? :string,
+  pageTitle: string,
+  description: string,
+  featureImage: string,
+  url: string,
+
 };
 
 const Layout = ({
   children,
   pageTitle,
   description,
-  socialImage, 
+  featureImage,
+  url, 
 }: Props) => {
-  const { title: siteTitle, url: url, author:author } = useSiteMetadata();
-  const metaImage = socialImage != null ? socialImage : author.photo;
+  const { title: siteTitle } = useSiteMetadata();
   //Not needed since hosting media on cloudinary
   //const metaImageUrl = url + withPrefix(metaImage);
 
@@ -33,12 +35,12 @@ const Layout = ({
       description={description}
       canonical={url}
       openGraph={{
-        url: {url},
+        url: url,
         title:`${pageTitle} - ${siteTitle}`,
-        description: {description},
+        description: description,
         images: [
           {
-            url: {metaImage},
+            url: featureImage,
             width: 800,
             height: 600,
             alt: 'Og Image Alt',
@@ -52,7 +54,7 @@ const Layout = ({
           { url: 'https://www.example.ie/og-image-03.jpg' },
           { url: 'https://www.example.ie/og-image-04.jpg' },
         ],
-        site_name: {siteTitle},
+        site_name: siteTitle,
       }}
     />
       <div className="bg-charcoal text-gray-100 min-h-screen relative">
