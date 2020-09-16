@@ -20,7 +20,7 @@ const Layout = ({
   description,
   socialImage, 
 }: Props) => {
-  const { title: siteTitle, url: url } = useSiteMetadata();
+  const { title: siteTitle, url: url, author:author } = useSiteMetadata();
   const metaImage = socialImage != null ? socialImage : author.photo;
   //Not needed since hosting media on cloudinary
   //const metaImageUrl = url + withPrefix(metaImage);
