@@ -60,6 +60,7 @@
     "gatsby-plugin-mdx": "^1.2.36",
     "gatsby-plugin-netlify": "^2.3.11",
     "gatsby-plugin-netlify-cms": "^4.3.11",
+    "gatsby-plugin-next-seo": "^1.6.1",
     "gatsby-plugin-nprogress": "^2.3.10",
     "gatsby-plugin-optimize-svgs": "^1.0.4",
     "gatsby-plugin-postcss": "^2.3.11",
@@ -94,6 +95,7 @@
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
+    "react-helmet-async": "^1.0.7",
     "react-reveal": "^1.2.2",
     "tailwindcss": "^1.8.8"
   },

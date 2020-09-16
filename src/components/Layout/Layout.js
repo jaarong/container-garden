@@ -1,6 +1,6 @@
 // @flow strict
 import React from 'react';
-import Helmet from 'react-helmet';
+import { GatsbySeo } from 'gatsby-plugin-next-seo';
 import Footer from "../Footer";
 import Header from "../Header";
 //import { withPrefix } from 'gatsby';
@@ -28,17 +28,33 @@ const Layout = ({
 
   return (
     <div>
-      <Helmet>
-        <html lang="en" />
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta property="og:site_name" content={title} />
-        <meta property="og:image" content={metaImage} />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={metaImage} />
-      </Helmet>
+      <GatsbySeo
+      title={title}
+      description={description}
+      canonical={url}
+      openGraph={{
+        url: {url},
+        title: {title},
+        description: {description},
+        images: [
+          {
+            url: {metaImage},
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt',
+          },
+          {
+            url: 'https://www.example.ie/og-image-02.jpg',
+            width: 900,
+            height: 800,
+            alt: 'Og Image Alt Second',
+          },
+          { url: 'https://www.example.ie/og-image-03.jpg' },
+          { url: 'https://www.example.ie/og-image-04.jpg' },
+        ],
+        site_name: 'Container.Greens',
+      }}
+    />
       <div className="bg-charcoal text-gray-100 min-h-screen relative">
         <Header />
         <div className="pb-16">

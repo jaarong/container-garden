@@ -273,6 +273,22 @@ module.exports = {
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-transition-link`,
     {
+      resolve: 'gatsby-plugin-next-seo',
+      options: {
+        openGraph: {
+          type: 'website',
+          locale: 'en_IE',
+          url: 'https://www.container.garden',
+          site_name: 'Container.Garden',
+        },
+        twitter: {
+          handle: '@ContainerGreens',
+          site: '@ContainerGreens',
+          cardType: 'summary_large_image',
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
