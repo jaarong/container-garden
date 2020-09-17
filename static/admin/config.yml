@@ -29,7 +29,7 @@ collections:
     fields:
       - {label: "Template", name: "template", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
-      - name: featured_image
+      - name: featuredImage
         label: Featured image
         widget: object
         fields:
