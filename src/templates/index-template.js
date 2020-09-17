@@ -58,7 +58,7 @@ export const query = graphql`
             date
             category
             description
-            featuredImage
+            feature_image
           }
         }
       }

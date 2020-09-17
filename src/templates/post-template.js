@@ -15,9 +15,9 @@ type Props = {
 const PostTemplate = ({ data }: Props) => {
   const { subtitle: siteSubtitle, author:author, url: url } = useSiteMetadata();
   const { frontmatter } = data.mdx;
-  const { title: title, description: postDescription, featuredImage } = frontmatter;
+  const { title: title, description: postDescription, feature_image } = frontmatter;
   const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
-  const featureImage = featuredImage != null ? featuredImage : author.photo;
+  const featureImage = feature_image != null ? feature_image : author.photo;
   const containerCss = "container mx-auto p-6 max-w-screen-md";
   const canonicalUrl = url + "/" + data.mdx.slug;
   return (
@@ -42,7 +42,7 @@ export const query = graphql`
         description
         tags
         title
-        featuredImage
+        feature_image
       }
     }
   }

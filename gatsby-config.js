@@ -115,7 +115,7 @@ module.exports = {
                         template
                         draft
                         description
-                        featuredImage
+                        feature_image
                       }
                     }
                   }

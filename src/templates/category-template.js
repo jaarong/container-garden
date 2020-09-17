@@ -62,7 +62,7 @@ export const query = graphql`
             description
             category
             title
-            featuredImage
+            feature_image
           }
         }
       }

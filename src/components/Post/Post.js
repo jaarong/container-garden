@@ -19,15 +19,15 @@ type Props = {
 const Post = ({ post, containerCss }: Props) => {
   const { body } = post;
   const { tagSlugs, slug } = post.fields;
-  const { tags, title, date, featuredImage } = post.frontmatter;
+  const { tags, title, date, feature_image } = post.frontmatter;
 
   return (
     <div className="post-start">
       <div>
-        <Banner title={title} featuredImage={featuredImage} />
+        <Banner title={title} featureImage={feature_image} />
       </div>
       <div className={containerCss}>
-        <Content body={body} title={title} banner={featuredImage} />
+        <Content body={body} title={title} banner={featured_image} />
       </div>
 
       <div className={containerCss}>
