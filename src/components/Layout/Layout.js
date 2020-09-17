@@ -11,7 +11,7 @@ type Props = {
   children: ReactNode,
   pageTitle: string,
   description: string,
-  featureImage: string,
+  featureImage: array,
   url: string,
 
 };
@@ -40,10 +40,10 @@ const Layout = ({
         description: description,
         images: [
           {
-            url: featureImage,
+            url: featureImage.src,
             width: 800,
             height: 600,
-            alt: 'Og Image Alt',
+            alt: featureImage.alt,
           }
         ],
         site_name: siteTitle,

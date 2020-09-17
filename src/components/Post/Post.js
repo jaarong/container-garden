@@ -27,7 +27,7 @@ const Post = ({ post, containerCss }: Props) => {
         <Banner title={title} featuredImage={featuredImage} />
       </div>
       <div className={containerCss}>
-        <Content body={body} title={title} banner={featuredImage} />
+        <Content body={body} title={title} />
       </div>
 
       <div className={containerCss}>

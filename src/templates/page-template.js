@@ -17,11 +17,11 @@ const PageTemplate = ({ data }: Props) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
   const { body } = data.mdx;
   const { frontmatter } = data.mdx;
-  const { title: pageTitle, description: pageDescription, socialImage } = frontmatter;
+  const { title: pageTitle, description: pageDescription } = frontmatter;
   const metaDescription = pageDescription !== null ? pageDescription : siteSubtitle;
 
   return (
-    <Layout title={`${pageTitle} - ${siteTitle}`} description={metaDescription} socialImage={socialImage} >
+    <Layout title={`${pageTitle} - ${siteTitle}`} description={metaDescription} >
       <Page title={pageTitle}>
         <MDXRenderer>{body}</MDXRenderer>
       </Page>
@@ -39,7 +39,6 @@ export const query = graphql`
         title
         date
         description
-        socialImage
       }
     }
   }

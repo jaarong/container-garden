@@ -42,7 +42,11 @@ export const query = graphql`
         description
         tags
         title
-        featuredImage
+        featuredImage {
+          alt
+          src
+          title
+        }
       }
     }
   }

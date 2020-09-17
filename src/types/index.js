@@ -30,7 +30,7 @@ export type Node = {
     category?: string,
     tags?: string[],
     title: string,
-    socialImage?: string
+    featuredImage: array
   },
   body: string,
   id: string

@@ -30,7 +30,7 @@ const Feed = ({ edges }: Props) => (
             <p className="mt-10"><Link className="border border-white text-lg rounded-lg p-3" to={edge.node.fields.slug}>Read More</Link></p>
           </div>
           <div className="w-full md:w-2/5">
-            <Link to={edge.node.fields.slug}><img src={edge.node.frontmatter.featuredImage} /></Link>
+            <Link to={edge.node.fields.slug}><img src={edge.node.frontmatter.featuredImage.src} /></Link>
           </div>
         </div>
       </div>

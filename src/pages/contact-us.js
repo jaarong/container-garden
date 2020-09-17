@@ -17,7 +17,7 @@ const ContactPage = ({ data }: Props) => {
     const { siteTitle, siteSubtitle } = useSiteMetadata();
     const { body } = data.mdx;
     const { frontmatter } = data.mdx;
-    const { title: pageTitle, description: pageDescription, socialImage } = frontmatter;
+    const { title: pageTitle, description: pageDescription } = frontmatter;
 
     const [emailInput, setEmail] = useState("");
     const [nameInput, setName] = useState("");
@@ -95,7 +95,6 @@ export const query = graphql`
         title
         date
         description
-        socialImage
       }
     }
   }
