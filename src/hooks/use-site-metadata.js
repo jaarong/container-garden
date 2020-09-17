@@ -12,6 +12,11 @@ const useSiteMetadata = () => {
               bio
               photo
             }
+            logo {
+              alt
+              src
+              title
+            }
             contacts {
               social {
                 twitter {

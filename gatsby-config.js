@@ -13,7 +13,8 @@ module.exports = {
     disqusShortname: siteConfig.disqusShortname,
     menu: siteConfig.menu,
     author: siteConfig.author,
-    contacts: siteConfig.contacts
+    contacts: siteConfig.contacts,
+    logo: siteConfig.logo
   },
   plugins: [
     {

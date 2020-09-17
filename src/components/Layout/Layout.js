@@ -11,7 +11,7 @@ type Props = {
   children: ReactNode,
   pageTitle: string,
   description: string,
-  featureImage: array,
+  featureImage: Object,
   url: string,
 
 };
@@ -24,6 +24,7 @@ const Layout = ({
   url, 
 }: Props) => {
   const { title: siteTitle } = useSiteMetadata();
+  console.log(featureImage);
   //Not needed since hosting media on cloudinary
   //const metaImageUrl = url + withPrefix(metaImage);
 

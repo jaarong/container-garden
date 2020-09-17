@@ -5,6 +5,11 @@ module.exports = {
   pathPrefix: '/',
   title: 'Container.Garden',
   subtitle: 'My adventures in container gardening',
+  logo: {
+    alt: 'A leaf',
+    src: '/logo.jpg',
+    title: 'A leaf'
+  },
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 5,
