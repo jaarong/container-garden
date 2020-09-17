@@ -1,9 +1,13 @@
 ---
-template: post
-title: Starting a fall container garden
-featuredImage: https://res.cloudinary.com/hskvixv4h/image/upload/c_scale,w_1280/c_scale,f_auto,q_auto,w_1000/v1599149399/fall-seedlings-43_lkebyg.jpg
+featured_image:
+  src: https://res.cloudinary.com/hskvixv4h/image/upload/c_scale,f_auto,q_auto,w_1000/v1599149399/fall-seedlings-43_lkebyg.jpg
+  alt: Seedling starts in four containers
+  title: Seedling starts in four containers
 slug: 2020/starting-a-fall-container-garden
 draft: false
+featuredImage: https://res.cloudinary.com/hskvixv4h/image/upload/c_scale,w_1280/c_scale,f_auto,q_auto,w_1000/v1599149399/fall-seedlings-43_lkebyg.jpg
+template: post
+title: Starting a fall container garden
 date: 2020-09-02T18:25:45.398Z
 description: Here's an update to my beginning fall container garden.
 category: general
