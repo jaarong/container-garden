@@ -15,7 +15,7 @@ type Props = {
 const PostTemplate = ({ data }: Props) => {
   const { subtitle: siteSubtitle, author:author, url: url, logo:logo } = useSiteMetadata();
   const { frontmatter } = data.mdx;
-  const { title: title, description: postDescription } = frontmatter;
+  const { title: title, description: postDescription, featuredImage: featureImage } = frontmatter;
   const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
   const containerCss = "container mx-auto p-6 max-w-screen-md";
   const canonicalUrl = url + "/" + data.mdx.slug;
