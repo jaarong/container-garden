@@ -13,7 +13,7 @@ type Props = {
 };
 
 const IndexTemplate = ({ data, pageContext }: Props) => {
-  const { title: siteTitle, subtitle: siteSubtitle, logo: logo } = useSiteMetadata();
+  const { title: siteTitle, subtitle: siteSubtitle, logo: logo, url:url } = useSiteMetadata();
   const featureImage = logo;
   const {
     currentPage,
@@ -25,9 +25,8 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
 
   const { edges } = data.allMdx;
   const pageTitle = currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle;
-  console.log(featureImage);
   return (
-    <Layout title={pageTitle} description={siteSubtitle} featureImage={featureImage}>
+    <Layout pageTitle={pageTitle} description={siteSubtitle} featureImage={featureImage} url={url}>
       <Feed edges={edges} />
       <Pagination
         prevPagePath={prevPagePath}

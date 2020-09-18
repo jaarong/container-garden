@@ -9,7 +9,7 @@ import { useSiteMetadata } from '../../hooks';
 
 type Props = {
   children: ReactNode,
-  pageTitle: string,
+  title: string,
   description: string,
   featureImage: Object,
   url: string,
@@ -24,20 +24,18 @@ const Layout = ({
   url, 
 }: Props) => {
   const { title: siteTitle } = useSiteMetadata();
-  console.log(featureImage);
   //Not needed since hosting media on cloudinary
   //const metaImageUrl = url + withPrefix(metaImage);
-
-
+  const title = `${pageTitle} - ${siteTitle}`;
   return (
     <div>
       <GatsbySeo
-      title={`${pageTitle} - ${siteTitle}`}
+      title={title}
       description={description}
       canonical={url}
       openGraph={{
         url: url,
-        title:`${pageTitle} - ${siteTitle}`,
+        title: title,
         description: description,
         images: [
           {

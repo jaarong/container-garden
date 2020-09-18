@@ -14,15 +14,16 @@ type Props = {
 };
 
 const PageTemplate = ({ data }: Props) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
+  const { subtitle: siteSubtitle, logo: logo } = useSiteMetadata();
   const { body } = data.mdx;
   const { frontmatter } = data.mdx;
   const { title: pageTitle, description: pageDescription } = frontmatter;
   const metaDescription = pageDescription !== null ? pageDescription : siteSubtitle;
-
+  const containerCss = "container mx-auto p-6 max-w-screen-md";
+  const featureImage = logo;
   return (
-    <Layout title={`${pageTitle} - ${siteTitle}`} description={metaDescription} >
-      <Page title={pageTitle}>
+    <Layout pageTitle={pageTitle} description={metaDescription} featureImage={featureImage} >
+      <Page header={pageTitle} containerCss={containerCss}>
         <MDXRenderer>{body}</MDXRenderer>
       </Page>
     </Layout>
@@ -39,6 +40,7 @@ export const query = graphql`
         title
         date
         description
+
       }
     }
   }

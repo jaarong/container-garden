@@ -1,11 +1,12 @@
 import React, { useRef, useEffect } from 'react';
 
 type Props = {
-  title?: string,
-  children: React.Node
+  header?: string,
+  children: React.Node,
+  containerCss: string
 };
 
-const Page = ({ title, children }: Props) => {
+const Page = ({ header, children, containerCss }: Props) => {
   const pageRef = useRef();
 
   useEffect(() => {
@@ -13,9 +14,9 @@ const Page = ({ title, children }: Props) => {
   });
 
   return (
-    <div ref={pageRef} className="m-3 max-w-screen-md mx-auto">
-      <div className="container mx-auto p-6 max-w-screen-md">
-        { title && <h1 className="text-3xl">{title}</h1>}
+    <div ref={pageRef}>
+      <div className={containerCss}>
+        { header && <h1 className="text-3xl">{header}</h1>}
         <div className="mt-4">
           {children}
         </div>

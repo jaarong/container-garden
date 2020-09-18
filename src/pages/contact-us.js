@@ -14,15 +14,14 @@ type Props = {
 };
 
 const ContactPage = ({ data }: Props) => {
-    const { siteTitle, siteSubtitle } = useSiteMetadata();
+    const { logo: logo } = useSiteMetadata();
     const { body } = data.mdx;
     const { frontmatter } = data.mdx;
     const { title: pageTitle, description: pageDescription } = frontmatter;
-
+    const featureImage = logo;
     const [emailInput, setEmail] = useState("");
     const [nameInput, setName] = useState("");
     const [messageInput, setMessage] = useState("");
-
     const [serverState, setServerState] = useState({
         submitting: false,
         status: null
@@ -54,8 +53,8 @@ const ContactPage = ({ data }: Props) => {
     };
 
     return (
-        <Layout title={`${pageTitle} - ${siteTitle}`} description={siteSubtitle}>
-            <div className="m-3 max-w-screen-md mx-auto">
+        <Layout pageTitle={pageTitle} description={pageDescription} featureImage={featureImage}>
+            <div classNameS="m-3 max-w-screen-md mx-auto">
                 <div className="container mx-auto p-6 max-w-screen-md">
                     <h1 className="text-5xl">{pageTitle}</h1>
                     <MDXRenderer>{body}</MDXRenderer>

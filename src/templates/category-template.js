@@ -14,8 +14,9 @@ type Props = {
 };
 
 const CategoryTemplate = ({ data, pageContext }: Props) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
-
+  const { subtitle: siteSubtitle, logo: logo, url: url } = useSiteMetadata();
+  const featureImage = logo;
+  const containerCss = "container mx-auto p-6 max-w-screen-lg";
   const {
     category,
     currentPage,
@@ -26,11 +27,11 @@ const CategoryTemplate = ({ data, pageContext }: Props) => {
   } = pageContext;
 
   const { edges } = data.allMdx;
-  const pageTitle = currentPage > 0 ? `${category} - Page ${currentPage} - ${siteTitle}` : `${category} - ${siteTitle}`;
-
+  const pageTitle = currentPage > 0 ? `${category} - Page ${currentPage}` : `${category}`;
+  const canonicalUrl = url + "/category/" + category + "/";
   return (
-    <Layout title={pageTitle} description={siteSubtitle}>
-      <Page title={category}>
+    <Layout pageTitle={pageTitle} description={siteSubtitle} url={canonicalUrl} featureImage={featureImage}>
+      <Page title={category} containerCss={containerCss}>
         <Feed edges={edges} />
         <Pagination
           prevPagePath={prevPagePath}

@@ -13,11 +13,11 @@ type Props = {
 };
 
 const PostTemplate = ({ data }: Props) => {
-  const { subtitle: siteSubtitle, author:author, url: url } = useSiteMetadata();
+  const { subtitle: siteSubtitle, author:author, url: url, logo:logo } = useSiteMetadata();
   const { frontmatter } = data.mdx;
-  const { title: title, description: postDescription, featuredImage } = frontmatter;
+  const { title: title, description: postDescription } = frontmatter;
   const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
-  const featureImage = featuredImage != null ? featuredImage : author.photo;
+  const featureImage = frontmatter.featuredImage != null ? frontmatter.featuredImage : logo;
   const containerCss = "container mx-auto p-6 max-w-screen-md";
   const canonicalUrl = url + "/" + data.mdx.slug;
   return (
