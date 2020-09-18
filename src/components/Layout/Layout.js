@@ -23,10 +23,11 @@ const Layout = ({
   featureImage,
   url, 
 }: Props) => {
-  const { title: siteTitle } = useSiteMetadata();
+  const { title: siteTitle, logo: logo } = useSiteMetadata();
   //Not needed since hosting media on cloudinary
   //const metaImageUrl = url + withPrefix(metaImage);
   const title = `${pageTitle} - ${siteTitle}`;
+  featureImage = featureImage != null ? featureImage : logo;
   return (
     <div>
       <GatsbySeo

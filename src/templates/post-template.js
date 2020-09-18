@@ -17,7 +17,6 @@ const PostTemplate = ({ data }: Props) => {
   const { frontmatter } = data.mdx;
   const { title: title, description: postDescription } = frontmatter;
   const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
-  const featureImage = frontmatter.featuredImage != null ? frontmatter.featuredImage : logo;
   const containerCss = "container mx-auto p-6 max-w-screen-md";
   const canonicalUrl = url + "/" + data.mdx.slug;
   return (
