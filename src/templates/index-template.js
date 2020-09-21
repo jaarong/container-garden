@@ -6,6 +6,7 @@ import Feed from '../components/Feed';
 import Pagination from '../components/Pagination';
 import { useSiteMetadata } from '../hooks';
 import type { PageContext, AllMdx } from '../types';
+import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 type Props = {
   data: AllMdx,
@@ -25,8 +26,30 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
 
   const { edges } = data.allMdx;
   const pageTitle = currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle;
+  const title = `${pageTitle} - ${siteTitle}`;
+  const metaDescription = "The home page of Container.Garden";
+  const canonicalUrl = url;
   return (
-    <Layout pageTitle={pageTitle} description={siteSubtitle} featureImage={featureImage} url={url}>
+    <Layout>
+      <GatsbySeo
+        title={title}
+        description={metaDescription}
+        canonical={canonicalUrl}
+        openGraph={{
+          url: canonicalUrl,
+          title: title,
+          description: metaDescription,
+          images: [
+            {
+              url: featureImage.src,
+              width: 800,
+              height: 600,
+              alt: featureImage.alt,
+            }
+          ],
+          site_name: siteTitle,
+        }}
+      />
       <Feed edges={edges} />
       <Pagination
         prevPagePath={prevPagePath}

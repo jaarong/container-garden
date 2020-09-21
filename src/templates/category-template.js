@@ -7,6 +7,7 @@ import Page from '../components/Page';
 import Pagination from '../components/Pagination';
 import { useSiteMetadata } from '../hooks';
 import type { PageContext, AllMdx } from '../types';
+import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 type Props = {
   data: AllMdx,
@@ -14,7 +15,7 @@ type Props = {
 };
 
 const CategoryTemplate = ({ data, pageContext }: Props) => {
-  const { subtitle: siteSubtitle, logo: logo, url: url } = useSiteMetadata();
+  const { title: siteTitle, subtitle: siteSubtitle, logo: logo, url: url } = useSiteMetadata();
   const featureImage = logo;
   const containerCss = "container mx-auto p-6 max-w-screen-lg";
   const {
@@ -29,9 +30,30 @@ const CategoryTemplate = ({ data, pageContext }: Props) => {
   const { edges } = data.allMdx;
   const pageTitle = currentPage > 0 ? `${category} - Page ${currentPage}` : `${category}`;
   const canonicalUrl = url + "/category/" + category + "/";
+  const metaDescription = "All posts in the " + category + " category - " + siteTitle;
+  const title = `${pageTitle} - ${siteTitle}`;
   return (
-    <Layout pageTitle={pageTitle} description={siteSubtitle} url={canonicalUrl} featureImage={featureImage}>
-      <Page title={category} containerCss={containerCss}>
+    <Layout>
+      <GatsbySeo
+        title={title}
+        description={metaDescription}
+        canonical={canonicalUrl}
+        openGraph={{
+          url: canonicalUrl,
+          title: title,
+          description: metaDescription,
+          images: [
+            {
+              url: featureImage.src,
+              width: 800,
+              height: 600,
+              alt: featureImage.alt,
+            }
+          ],
+          site_name: siteTitle,
+        }}
+      />
+      <Page header={category} containerCss={containerCss}>
         <Feed edges={edges} />
         <Pagination
           prevPagePath={prevPagePath}
