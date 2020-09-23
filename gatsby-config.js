@@ -270,6 +270,7 @@ module.exports = {
         showSpinner: false,
       },
     },
+    'gatsby-plugin-offline',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-postcss',

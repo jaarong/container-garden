@@ -16,20 +16,20 @@ type Props = {
 const PostTemplate = ({ data }: Props) => {
   const { title: siteTitle, subtitle: siteSubtitle, author:author, url: url, logo:logo } = useSiteMetadata();
   const { frontmatter } = data.mdx;
-  const { title: pageTitle, description: postDescription, featuredImage: featuredImage } = frontmatter;
+  const { title: pageTitle, description: postDescription, featuredImage: featuredImage, date: publishDate, category: category, tags: tags } = frontmatter;
   const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
   const featureImage = featuredImage != null ? featuredImage : logo;
   const containerCss = "container mx-auto p-6 max-w-screen-md";
   const canonicalUrl = url + "/" + data.mdx.slug;
   const title = `${pageTitle} - ${siteTitle}`;
   return (
-    <Layout pageTitle={title} description={metaDescription} featureImage={featureImage} url={canonicalUrl} >
+    <Layout >
       <GatsbySeo
         title={title}
         description={metaDescription}
-        canonical={url}
+        canonical={canonicalUrl}
         openGraph={{
-          url: url,
+          url: canonicalUrl,
           title: title,
           description: metaDescription,
           images: [
@@ -40,6 +40,15 @@ const PostTemplate = ({ data }: Props) => {
               alt: featureImage.alt,
             }
           ],
+          type: 'article',
+          article: {
+            publishedTime: publishDate,
+            section: category,
+            authors: [
+              author.name,
+            ],
+            tags: [tags],
+          },
           site_name: siteTitle,
         }}
       />
