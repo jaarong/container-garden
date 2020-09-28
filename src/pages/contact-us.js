@@ -9,7 +9,7 @@ import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 type Props = {
     data: {
-      mdx: mdx
+      mdx: Mdx
     }
 };
 
