@@ -2,14 +2,13 @@
 template: post
 title: Starting a fall container garden
 featuredImage:
-  src: https://res.cloudinary.com/hskvixv4h/image/upload/c_scale,f_auto,q_auto,w_1000/v1599149399/fall-seedlings-43_lkebyg.jpg
+  src: https://res.cloudinary.com/hskvixv4h/image/upload/c_scale,w_1000/c_scale,f_auto,q_auto,w_1000/v1599071302/fall-seedlings_qovzoe.jpg
   alt: Seedling starts in containers
   title: Seedling starts in containers
 slug: 2020/starting-a-fall-container-garden
 draft: false
 date: 2020-09-02T15:20:24.881Z
-description: I've begun to start some seeds for my fall container garden hoping
-  the heat is curtailed by some cold fronts by the end of September.
+description: I've begun to start some seeds for my fall container garden.
 category: general
 tags:
   - swiss chard
