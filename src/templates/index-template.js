@@ -74,12 +74,14 @@ export const query = graphql`
           fields {
             slug
             categorySlug
+            tagSlugs
           }
           frontmatter {
             title
             date
             category
             description
+            tags
             featuredImage {
               alt
               src
