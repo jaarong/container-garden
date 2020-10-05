@@ -5,8 +5,8 @@ import Comments from './Comments';
 import Content from './Content';
 import Meta from './Meta';
 import Tags from './Tags';
-import Banner from './Banner';
 import type { Node } from '../../types';
+import Img from "gatsby-image";
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
@@ -23,8 +23,10 @@ const Post = ({ post, containerCss }: Props) => {
 
   return (
     <div className="post-start">
-      <div>
-        <Banner title={title} featuredImage={featuredImage} />
+      <div className="container sm:w-full md:w-3/5 m-auto text-center bg-opacity-50 bg-black">
+        {/* <Banner title={title} featuredImage={featuredImage} /> */}
+        <Img fixed={featuredImage.src} />
+        <h1 className="text-3xl lg:text-5xl text-gray-20">{title}</h1>
       </div>
       <div className={containerCss}>
         <Content body={body} title={title} />

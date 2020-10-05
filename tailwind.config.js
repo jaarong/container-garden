@@ -4,7 +4,9 @@ module.exports = {
     minHeight: {
       '0': '0',
       '1/4': '25vh',
+      '2/5': '40vh',
       '1/2': '50vh',
+      '3/5': '60vh',
       '3/4': '75vh',
       'full': '100%',
       'screen': '100vh'
