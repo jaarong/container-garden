@@ -2,7 +2,7 @@
 template: post
 title: Starting a fall container garden
 featuredImage:
-  src: https://res.cloudinary.com/hskvixv4h/image/upload/c_scale,w_1000/c_scale,f_auto,q_auto,w_1000/v1599071302/fall-seedlings_qovzoe.jpg
+  src: https://res.cloudinary.com/dibrkdu2g/image/upload/c_scale,f_auto,q_auto,w_1280/v1601581420/20200831_171107_fq6sm7.jpg
   alt: Seedling starts in containers
   title: Seedling starts in containers
 slug: 2020/starting-a-fall-container-garden
