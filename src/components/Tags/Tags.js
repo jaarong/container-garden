@@ -9,13 +9,13 @@ type Props = {
   tagSlugs: string[]
 };
 
-const Tags = ({ tags, tagSlugs }: Props) => (
-  <div className="">
-    <ul className="list-none my-4">
+const Tags = ({ className, tags, tagSlugs }: Props) => (
+  <div className="inline-block">
+    <ul className="inline-block list-none my-4">
       {tagSlugs && tagSlugs.map((slug, i) => (
-        <li className="inline-block rounded-full px-3 py-1 text-sm font-semibold hover:text-primary hover:border-pine" key={tags[i]}>
+        <li className={className} key={tags[i]}>
           <Link to={slug} className="">
-          <FontAwesomeIcon className="text-xs" icon={ faHashtag } />{tags[i]}
+          <FontAwesomeIcon icon={ faHashtag } />{tags[i]}
           </Link>
         </li>
       ))}

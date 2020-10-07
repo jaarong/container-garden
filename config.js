@@ -7,7 +7,7 @@ module.exports = {
   subtitle: 'My adventures in container gardening',
   logo: {
     alt: 'A leaf',
-    src: '/logo.jpg',
+    src: '/leaf_logo.jpg',
     title: 'A leaf'
   },
   copyright: '© All rights reserved.',
