@@ -1,5 +1,10 @@
 'use strict';
 
+// Load the environment variables.
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 const siteConfig = require('./config.js');
 const postCssPlugins = require('./postcss.config.js');
 
@@ -44,6 +49,23 @@ module.exports = {
         name: 'assets',
         path: `${__dirname}/static`
       }
+    },
+    {
+      resolve:`gatsby-source-cloudinary`,
+      options: {
+      cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+      apiKey: process.env.CLOUDINARY_API_KEY,
+      apiSecret: process.env.CLOUDINARY_API_SECRET,
+      resourceType: `image`
+      }
+    },
+    {
+      resolve: 'gatsby-transformer-cloudinary',
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+      },
     },
     {
       resolve: 'gatsby-plugin-mdx',

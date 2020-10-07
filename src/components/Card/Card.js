@@ -31,8 +31,8 @@ const Card = ({ content }: Props) => {
                 </div>
                 <p className="my-6">{content.frontmatter.description}</p>
             </div>
-            <div className="px-1">
-                <Tags tags={content.frontmatter.tags} tagSlugs={content.fields.tagSlugs} />
+            <div className="px-4">
+                <Tags tagCss="inline-block pr-3 text-sm font-semibold hover:text-primary hover:border-pine" tags={content.frontmatter.tags} tagSlugs={content.fields.tagSlugs} />
             </div>
         </div>
     );

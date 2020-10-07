@@ -33,7 +33,7 @@ const Post = ({ post, containerCss }: Props) => {
 
       <div className={containerCss}>
         <Meta date={date} />
-        <span className="inline-block pr-4">Tags: </span>{tags && tagSlugs && <Tags className="inline-block pr-3 font-semibold hover:text-primary hover:border-pine" tags={tags} tagSlugs={tagSlugs} />}
+        <span className="inline-block pr-4">Tags: </span>{tags && tagSlugs && <Tags tagCss="inline-block pr-3 font-semibold hover:text-primary hover:border-pine" tags={tags} tagSlugs={tagSlugs} />}
         <Author />
       </div>
 
