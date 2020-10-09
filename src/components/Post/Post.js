@@ -19,12 +19,14 @@ const Post = ({ post, containerCss }: Props) => {
   const { body } = post;
   const { tagSlugs, slug } = post.fields;
   const { tags, title, date, featuredImage } = post.frontmatter;
+  const featureImageSrc= `https://res.cloudinary.com/dibrkdu2g/image/upload/c_scale,f_auto,q_auto,w_1280/v1601581422/${featuredImage.src}`;
+
 
   return (
     <div className="post-start">
       <div className="container sm:w-full md:w-3/5 m-auto text-center bg-opacity-50 bg-black">
         {/* <Banner title={title} featuredImage={featuredImage} /> */}
-        <img src={featuredImage.src} title={featuredImage.title} alt={featuredImage.alt} />
+        <img src={featureImageSrc} title={featuredImage.title} alt={featuredImage.alt} />
         <h1 className="text-3xl lg:text-5xl text-gray-20">{title}</h1>
       </div>
       <div className={containerCss}>

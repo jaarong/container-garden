@@ -2,7 +2,6 @@
 import React from 'react';
 import moment from 'moment';
 import { Link } from 'gatsby';
-import Img from "gatsby-image";
 import type { Node } from '../../types';
 import Tags from "../Tags";
 
@@ -12,7 +11,7 @@ type Props = {
 
 const Card = ({ content }: Props) => {
 
-    const featureImageSrc = `https://res.cloudinary.com/dibrkdu2g/image/upload/c_scale,f_auto,q_auto,w_300/v1601581422/ ${content.frontmatter.featuredImage.src}`;
+    const featureImageSrc = `https://res.cloudinary.com/dibrkdu2g/image/upload/c_scale,f_auto,q_auto,w_300/v1601581422/${content.frontmatter.featuredImage.src}`;
 
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg my-2 bg-pine border-olivine border-2" key={content.fields.slug}>

@@ -2,7 +2,7 @@
 template: post
 title: My favorite podcasts
 featuredImage:
-  src: https://res.cloudinary.com/dibrkdu2g/image/upload/c_scale,f_auto,q_auto,w_800/v1602270752/Screenshot_20201009-140007_Player_FM_a64sct.jpg
+  src: Screenshot_20201009-140007_Player_FM_a64sct.jpg
   alt: Various thumbnail icons of gardening podcasts
   title: Various thumbnail icons of gardening podcasts
 slug: my-favorite-podcasts

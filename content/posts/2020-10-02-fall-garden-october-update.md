@@ -2,7 +2,7 @@
 template: post
 title: Fall Garden October update
 featuredImage:
-  src: https://res.cloudinary.com/dibrkdu2g/image/upload/c_scale,f_auto,q_auto,w_1280/v1601581422/20200930_144253_olel5a.jpg
+  src: 20200930_144253_olel5a.jpg
   alt: Four containers with young vegetable starts
   title: Four containers with young vegetable starts
 slug: fall-garden-update

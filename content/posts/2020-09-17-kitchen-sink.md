@@ -2,7 +2,7 @@
 template: post
 title: Kitchen Sink
 featuredImage:
-  src: https://res.cloudinary.com/hskvixv4h/image/upload/c_scale,f_auto,q_auto,w_1000/v1596573456/sample.jpg
+  src: sample.jpg
   alt: Flowers
   title: Flowers
 slug: 2020/kitchen-sink
