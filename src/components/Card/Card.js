@@ -12,9 +12,11 @@ type Props = {
 
 const Card = ({ content }: Props) => {
 
+    const featureImageSrc = `https://res.cloudinary.com/dibrkdu2g/image/upload/c_scale,f_auto,q_auto,w_300/v1601581422/ ${content.frontmatter.featuredImage.src}`;
+
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg my-2 bg-pine border-olivine border-2" key={content.fields.slug}>
-            <Link to={content.fields.slug}><img className="w-full" src={content.frontmatter.featuredImage.src} alt={content.frontmatter.featuredImage.alt} /></Link>
+            <Link to={content.fields.slug}><img className="w-full" src={featureImageSrc} alt={content.frontmatter.featuredImage.alt} /></Link>
             <div className="px-4">
                 <h2 className="text-2xl my-2">
                     <Link className="text-white" to={content.fields.slug}>{content.frontmatter.title}</Link>

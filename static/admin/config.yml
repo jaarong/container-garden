@@ -6,7 +6,7 @@ media_library:
   config:
     cloud_name: dibrkdu2g
     api_key: 985438312242657
-    output_filename_only: false
+    output_filename_only: true
     default_transformations:
       - - fetch_format: auto
           width: 1280
