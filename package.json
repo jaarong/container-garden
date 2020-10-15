@@ -97,7 +97,7 @@
     "react-helmet": "^6.1.0",
     "react-helmet-async": "^1.0.7",
     "react-reveal": "^1.2.2",
-    "tailwindcss": "^1.8.8"
+    "tailwindcss": "^1.9.1"
   },
   "devDependencies": {
     "@babel/core": "7.10.5",
