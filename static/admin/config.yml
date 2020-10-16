@@ -34,7 +34,6 @@ collections:
         widget: object
         media_library:
           name: cloudinary
-          output_filename_only: true
         fields:
           - {name: src, label: Image, widget: image}
           - {name: alt, label: Alt text, widget: string}
