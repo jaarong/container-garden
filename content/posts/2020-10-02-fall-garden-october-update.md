@@ -5,7 +5,7 @@ featuredImage:
   src: https://res.cloudinary.com/dibrkdu2g/image/upload/f_auto/v1601581422/20200930_144253_olel5a.jpg
   alt: Four containers with young vegetable starts
   title: Four containers with young vegetable starts
-  id: 20200930_144253_olel5a
+  id: v1601581422/20200930_144253_olel5a.jpg
 slug: fall-garden-update
 draft: false
 date: 2020-10-02T14:54:15.729Z
