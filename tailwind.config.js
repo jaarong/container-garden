@@ -1,5 +1,10 @@
 module.exports = {
-  purge: [],
+  purge: [
+    './src/components/*.js',
+    './src/templates/*.js',
+    './src/pages/*.js',
+    './src/cms/*.js',
+  ],
   theme: {
     minHeight: {
       '0': '0',

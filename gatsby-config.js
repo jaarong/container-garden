@@ -125,6 +125,7 @@ module.exports = {
                           alt
                           src
                           title
+                          id
                         }
                       }
                     }

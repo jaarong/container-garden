@@ -7,7 +7,7 @@ type Props = {
 
 const Banner = ({ title, featuredImage }: Props) => {
 
-  const featureImageSrc= `https://res.cloudinary.com/dibrkdu2g/image/upload/c_scale,f_auto,q_auto,w_1280/v1601581422/${featuredImage.src}`;
+  const featureImageSrc = `https://res.cloudinary.com/dibrkdu2g/image/upload/c_lpad,f_auto,q_auto,w_300/${featuredImage.id}`;
 
   return (
 

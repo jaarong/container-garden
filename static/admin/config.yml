@@ -11,7 +11,7 @@ media_library:
       - fetch_format: auto
       - width: 1280
       - quality: auto
-      - crop: Ipad
+      - crop: lpad
 media_folder: "static/media"
 public_folder: "/media"
 
