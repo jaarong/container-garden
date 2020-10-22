@@ -8,12 +8,10 @@ type Props = {
 };
 
 const Feed = ({ edges }: Props) => (
-  <div className="container mx-auto p-6 max-w-screen-lg">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div className="container mx-auto p-6 max-w-screen-xl flex flex-row">
       {edges.map((edge) => (
         <Card content={edge.node} />
       ))}
-    </div>
   </div>
 );
 

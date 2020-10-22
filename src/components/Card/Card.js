@@ -14,7 +14,7 @@ const Card = ({ content }: Props) => {
     const featureImageSrc = `https://res.cloudinary.com/dibrkdu2g/image/upload/c_lpad,f_auto,q_auto,w_300/${content.frontmatter.featuredImage.id}`;
 
     return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg my-2 bg-pine border-olivine border-2" key={content.fields.slug}>
+        <div className="max-w-sm rounded mx-6 overflow-hidden shadow-lg my-2 bg-pine border-olivine border-2" key={content.fields.slug}>
             <Link to={content.fields.slug}><img className="w-full" src={featureImageSrc} alt={content.frontmatter.featuredImage.alt} /></Link>
             <div className="px-4">
                 <h2 className="text-2xl my-2">
