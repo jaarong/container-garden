@@ -27,7 +27,7 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
   const { edges } = data.allMdx;
   const pageTitle = currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle;
   const title = `${pageTitle} - ${siteTitle}`;
-  const metaDescription = "The home page of Container.Garden";
+  const metaDescription = {siteSubtitle};
   const canonicalUrl = url;
   return (
     <Layout>
