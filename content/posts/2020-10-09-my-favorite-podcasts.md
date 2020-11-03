@@ -10,7 +10,7 @@ slug: my-favorite-podcasts
 draft: false
 date: 2020-10-09T19:09:11.094Z
 description: A list of my favorite gardening podcasts
-category: general
+category: learn
 tags:
   - podcasts
 ---
