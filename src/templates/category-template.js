@@ -53,15 +53,13 @@ const CategoryTemplate = ({ data, pageContext }: Props) => {
           site_name: siteTitle,
         }}
       />
-      <Page header={category} containerCss={containerCss}>
-        <Feed edges={edges} />
-        <Pagination
-          prevPagePath={prevPagePath}
-          nextPagePath={nextPagePath}
-          hasPrevPage={hasPrevPage}
-          hasNextPage={hasNextPage}
-        />
-      </Page>
+      <Feed edges={edges} />
+      <Pagination
+        prevPagePath={prevPagePath}
+        nextPagePath={nextPagePath}
+        hasPrevPage={hasPrevPage}
+        hasNextPage={hasNextPage}
+      />
     </Layout>
   );
 };
