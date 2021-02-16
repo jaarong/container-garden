@@ -17,7 +17,7 @@ type Props = {
 const Author = ({ author, isIndex }: Props) => (
   <div className={styles['author']}>
     <Link to="/">
-    <div class="logo text-5xl pr-3"><FontAwesomeIcon icon={faSeedling} /></div>
+    <div className="logo text-5xl pr-3"><FontAwesomeIcon icon={faSeedling} /></div>
     </Link>
 
     { isIndex === true ? (

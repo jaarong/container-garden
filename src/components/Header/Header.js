@@ -18,7 +18,7 @@ const Header = () => {
   <header className="bg-pine border-b">
     <a id="topofpage"></a>
     <div className="container mx-auto">
-      <nav className="flex flex-col md:flex-row md:items-center justify-center md:justify-between md:flex-wrap md:p-1">
+      <nav className="flex flex-col md:flex-row md:items-center justify-center md:justify-between md:flex-wrap md:p-1 md:pl-6">
         <div className="flex justify-center md:flex-shrink-0 p-2">
           <Zoom>
             <div className="logo text-5xl pr-3"><Link className="text-dark" to="/"><FontAwesomeIcon icon={faSeedling} /></Link></div>
@@ -28,15 +28,15 @@ const Header = () => {
             </div>
           </Zoom>
         </div>
-        <div className="flex-grow text-center md:text-right bg-leaf-green text-lg md:bg-dark-green md:text-white">
+        <div className="flex-grow text-center md:text-right bg-leaf-green text-lg md:bg-dark-green md:text-white md:pr-6">
          <AniLink paintDrip hex="#A1C181" className="inline-block p-2 hover:text-dark" activeClassName="inline-block p-2 text-dark" to="/">Home</AniLink>
          <AniLink paintDrip hex="#A1C181" className="inline-block p-2 hover:text-dark" activeClassName="inline-block p-2 text-dark" to="/pages/about/">About</AniLink>
          <AniLink paintDrip hex="#A1C181" className="inline-block p-2 hover:text-dark" activeClassName="inline-block p-2 text-dark" to="/contact-us/">Contact</AniLink>
-         <div class="group inline-block relative">
-            <button class="block p-2 hover:text-dark" href="#">Categories&nbsp;<FontAwesomeIcon className="pt-1" icon={faChevronDown} /></button>
-            <div class="absolute bg-pine text-base w-full hidden rounded overflow-hidden group-hover:block">
+         <div className="group inline-block relative">
+            <button className="block p-2 hover:text-dark" href="#">Categories&nbsp;<FontAwesomeIcon className="pt-1" icon={faChevronDown} /></button>
+            <div className="absolute bg-pine text-base w-full hidden rounded overflow-hidden group-hover:block">
             {categories.map((category) => (
-              <AniLink paintDrip hex="#A1C181" class="inline-block p-2 text-white hover:bg-charcoal w-full" activeClassName="inline-block p-2 text-green-500" key={category.fieldValue} to={`/category/${kebabCase(category.fieldValue)}/`}>
+              <AniLink paintDrip hex="#A1C181" className="inline-block p-2 text-white hover:bg-charcoal w-full" activeClassName="inline-block p-2 text-green-500" key={category.fieldValue} to={`/category/${kebabCase(category.fieldValue)}/`}>
                 {category.fieldValue} ({category.totalCount})
               </AniLink>
             ))}

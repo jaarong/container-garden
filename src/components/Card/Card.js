@@ -20,7 +20,7 @@ const Card = ({ content }: Props) => {
                 <h2 className="text-2xl my-2">
                     <Link className="text-white" to={content.fields.slug}>{content.frontmatter.title}</Link>
                 </h2>
-                <div className="">
+                <div>
                 <p>
                     <time className="text-sm text-gray-400 font-light uppercase" dateTime={moment(content.frontmatter.date).format('MMMM D, YYYY')}>
                         {moment(content.frontmatter.date).format('MMMM YYYY')}
